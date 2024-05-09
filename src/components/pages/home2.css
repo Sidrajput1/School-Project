@@ -1,0 +1,28 @@
+/* #box1{
+    background: #262a68 repeating-linear-gradient(-45deg, #272966, #272966 3.5px, #171a41 3.5px, #171a41 7px);
+}
+
+#principal_box{
+    background: #dddbe49f repeating-linear-gradient(-30deg, #12a2bf, #16161925 3.5px, #9faeae 3.5px, #adafc1 7px);
+} */
+/* #box1{
+    background: #355E3B repeating-linear-gradient(-45deg, #0b6619, #44694a 3.5px, #1d4a24 3.5px, #4CBB17 7px);
+} */
+
+#box1{
+    background: linear-gradient(to right, #e0fbfc, #dbebfa, #d0e2fa, #c0d5f9, #b2c6f8);
+    
+     animation: gentleFlow 10s linear infinite alternate;
+}
+@keyframes gentleFlow {
+    0% {
+      background-position: 0% 50%; /* Start position */
+    }
+    100% {
+      background-position: 100% 50%; /* End position */
+    }
+  }
+
+#principal_box{
+    background: #dddbe49f repeating-linear-gradient(-30deg, #12a2bf, #16161925 3.5px, #9faeae 3.5px, #adafc1 7px);
+}

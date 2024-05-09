@@ -1,0 +1,24 @@
+.number-counter {
+    font-size: 44px;
+    font-weight: bold;
+  }
+  
+  .counter {
+    display: flex;
+    width: 60px; /* Adjust width as needed */
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    animation: fadeIn 1s ease-in-out; /* Optional fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
