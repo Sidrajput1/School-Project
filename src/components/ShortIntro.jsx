@@ -13,11 +13,11 @@ function ShortIntro() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-75"></div>
                 <div className="relative z-10 p-10 lg:p-20 text-white">
-                    <div className="text-center p-[7rem]">
-                        <h2 className="text-3xl lg:text-5xl font-extrabold tracking-tight mb-4">
+                    <div className="text-center md:p-[7rem] pt-[10rem]">
+                        <h2 id='st-marx' className="text-2xl lg:text-8xl text-[#008000] z-50 font-extrabold tracking-wide mb-4">
                               St Marx Acadmey
                         </h2>
-                        <p className="text-lg lg:text-xl mb-6">
+                        <p id='outline' className="text-lg lg:text-2xl mb-6">
                             Educating Minds, Empowering Lives
                         </p>
                         {/* <p className="text-lg lg:text-xl">

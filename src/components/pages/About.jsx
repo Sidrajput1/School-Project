@@ -1,13 +1,15 @@
 import React from 'react'
 import Message from './Message'
+import AboutUs2 from './AboutUs2'
 
 function About() {
     return (
 
 
 
-        <div>
-            <div className="relative bg-gray-900 overflow-hidden">
+        <div >
+            
+            <div  className="relative bg-gray-900 overflow-hidden">
                 {/* Background Image */}
                 <img
                     className="absolute inset-0 h-full w-full object-fill"
@@ -18,10 +20,10 @@ function About() {
                 <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-75"></div>
                 <div className="relative z-10 p-10 lg:p-20 text-white">
                     <div className="text-center">
-                        <h2 className="text-3xl lg:text-5xl font-extrabold tracking-tight mb-4">
+                        <h2 id='st-marx' className="text-2xl lg:text-5xl font-extrabold tracking-tight md:mb-4 mb-2">
                             Welcome to Our School
                         </h2>
-                        <p className="text-lg lg:text-xl mb-6">
+                        <p id='outline' className="text-sm lg:text-xl md:mb-6 mb-2">
                             Educating Minds, Empowering Lives
                         </p>
                         <p className="text-lg lg:text-xl">
@@ -33,7 +35,7 @@ function About() {
                 </div>
 
             </div>
-            <div className='w-full ml-10 min-h-[70vh] mt-10 flex justify-between items-start '>
+            <div  className='w-full ml-10 min-h-[70vh] mt-10 flex justify-between items-start '>
                 <div className=''>
                     <figure className='float-right w-[50%] h-fit p-8 '>
                         <img src="https://lh3.googleusercontent.com/p/AF1QipNDxYjIZqYx_RwmSO-up8VyZE5vicYIGxHph4ut=s680-w680-h510" alt="building2" className='max-w-[80%] max-h-[70vh] object-cover shadow-2xl border-b-2 rounded-xl ' />
@@ -46,8 +48,8 @@ function About() {
                 </div>
 
             </div> 
-
-            <Message />
+            <AboutUs2/>
+            {/* <Message /> */}
 
             
             

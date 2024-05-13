@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import VideoGal from './VideoGal';
 
 const GalleryPage = () => {
   // State to keep track of the selected image
@@ -73,13 +74,13 @@ const closeSelectedImage = () => {
 return (
   <div className='bg-[#ECFFDC]'>
     <div className="container mx-auto py-10  mt-2">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 border-t-2 border-l-2 border-dotted">
+      <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 border-t-2 border-l-2 border-dotted">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Image ${index + 1}`}
-            className={`cursor-pointer h-48 w-64 ${visibleImages.includes(image) ? 'opacity-100' : 'opacity-200'}` }
+            className={`cursor-pointer  h-48 md:w-64 w-full ${visibleImages.includes(image) ? 'opacity-100' : 'opacity-200'}` }
             onClick={() => handleImageClick(image)}
             style={{ transition: 'opacity 0.5s ease' }}
           />
@@ -102,6 +103,7 @@ return (
         </div>
       )}
     </div>
+    <VideoGal />
   </div>
 );
 };

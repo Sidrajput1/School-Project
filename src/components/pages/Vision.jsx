@@ -7,8 +7,8 @@ function Vision() {
             <ShortIntro />
             <div className='w-full min-h-[100vh]'>
                 
-                <div className='w-full min-h-[70vh] border-2 flex flex-col gap-10'>
-                    <div className=' w-[100%] flex flex-row border-2 '>
+                <div className='w-full min-h-[70vh]  flex flex-col gap-10'>
+                    <div className=' w-[100%] flex flex-row  '>
                         <div className="card lg:card-side bg-base-100 shadow-xl w-[50%]">
                             <figure><img src="https://t4.ftcdn.net/jpg/01/24/96/71/360_F_124967194_TDjsWtN4E3jREDz1UQOLJbVG4lo4Zc5t.jpg" alt="Album" /></figure>
                             <div className="card-body ">
@@ -23,7 +23,7 @@ function Vision() {
                             <h1 className='text-8xl font-serif font-semibold italic rotate-12'>Vision</h1>
                         </div>
                     </div>
-                    <div className='w-full flex flex-row-reverse border-2 justify-end items-end'>
+                    <div className='w-full flex flex-row-reverse  justify-end items-end'>
                         <div className="card lg:card-side bg-base-100 shadow-xl w-[50%] ">
                             <figure><img src="https://www.dpskolkata.com/wp-content/uploads/2022/12/mission-img.jpg" alt="Album" /></figure>
                             <div className="card-body">
@@ -35,7 +35,7 @@ function Vision() {
                             </div>
                         </div>
                         <div className='m-auto'>
-                            <h1 className='text-8xl font-serif font-semibold italic rotate-45'>Misson</h1>
+                            <h1 className='text-8xl font-serif font-semibold italic -rotate-45'>Misson</h1>
                         </div>
                     </div>
                 </div>

@@ -16,11 +16,11 @@ function Galary() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-75"></div>
                 <div className="relative z-10 p-10 lg:p-20 text-white">
-                    <div className="text-center p-[7rem]">
-                        <h2 className="text-3xl lg:text-5xl font-extrabold tracking-tight py-6">
-                            Welcome to Our School Galary
+                    <div className="text-center md:p-[7rem] py-36">
+                        <h2 id='st-marx' className="text-2xl lg:text-5xl font-extrabold tracking-tight md:py-6 py-1">
+                            Welcome to Our Gallery
                         </h2>
-                        <p className="text-lg lg:text-xl mb-6">
+                        <p id='outline' className="text-lg lg:text-xl mb-6">
                             Educating Minds, Empowering Lives
                         </p>
                         {/* <p className="text-lg lg:text-xl">
@@ -33,6 +33,7 @@ function Galary() {
 
             </div>
             <GalleryPage/>
+            
         </div>
     )
 }

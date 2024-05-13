@@ -7,22 +7,22 @@ function Message() {
                 <img src="https://readymadeui.com/profile_2.webp" className="w-full h-full object-contain  rounded-xl" />
             </div>
             <div className="p-4">
-                <h3 className="text-xl font-semibold">Principal's Message</h3>
-                <p className="mt-4 text-sm text-gray-800">We aim to provide every child with a truly holistic education while ensuring they have a joyful and exuberant schooling experience at St. Marx Academy campus.
+                <h3 id='st-marx' className="text-5xl font-semibold">Principal's Message</h3>
+                <p className="mt-4 text-lg text-white">We aim to provide every child with a truly holistic education while ensuring they have a joyful and exuberant schooling experience at St. Marx Academy campus.
  </p>
                 <div className="mt-8 text-left">
                     <h4 className="text-sm font-semibold">St Marx acadmey</h4>
-                    <p className="text-xs text-gray-400">stmarx@gmail.com</p>
+                    <p className="text-xs text-white-400">stmarx@gmail.com</p>
                 </div>
                 <div className="space-x-4 mt-8">
-                    <button type="button"
+                    <a href="https://www.facebook.com/p/ST-MARX-Academy-PATNA-100077192755453/" target='_blank'><button type="button"
                         className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
                             <path
                                 d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
                                 data-original="#010002" />
                         </svg>
-                    </button>
+                    </button></a>
                     <button type="button"
                         className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4] active:bg-[#03a9f4]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">

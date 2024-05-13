@@ -1,4 +1,6 @@
 import React from 'react'
+import logo from '../assets/school_pics/logo.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -8,13 +10,13 @@ function Footer() {
           <h2 className="text-white text-lg font-bold mb-4">Quick Links</h2>
           <ul className="space-y-3">
             <li>
-              <a href="#" className="text-gray-400 hover:text-white text-base transition-all">About</a>
+              <Link to={'/about'} className="text-gray-400 hover:text-white text-base transition-all">About</Link>
             </li>
             <li>
-              <a href="#" className="text-gray-400 hover:text-white text-base transition-all">Galary</a>
+            <Link to={'/gallery'} className="text-gray-400 hover:text-white text-base transition-all">Gallery</Link>
             </li>
             <li>
-              <a href="#" className="text-gray-400 hover:text-white text-base transition-all">Events</a>
+            <Link to={'/events'} className="text-gray-400 hover:text-white text-base transition-all">Events</Link>
             </li>
           </ul>
         </div>
@@ -22,10 +24,10 @@ function Footer() {
           <h2 className="text-white text-lg font-bold mb-4">Follow Us</h2>
           <ul className="space-y-3">
             <li>
-              <a href="#" className="text-gray-400 hover:text-white text-base transition-all">Facebook</a>
+              <a href="https://www.facebook.com/p/ST-MARX-Academy-PATNA-100077192755453/" target='_blank' className="text-gray-400 hover:text-white text-base transition-all">Facebook</a>
             </li>
             <li>
-              <a href="#" className="text-gray-400 hover:text-white text-base transition-all">Instagram</a>
+              <a href="https://www.instagram.com/st.marx_academy/" className="text-gray-400 hover:text-white text-base transition-all" target='_blank'>Instagram</a>
             </li>
             <li>
               <a href="#" className="text-gray-400 hover:text-white text-base transition-all">Twitter</a>
@@ -36,7 +38,7 @@ function Footer() {
           <h2 className="text-white text-lg font-bold mb-4">Address</h2>
           <ul className="space-y-3">
             <li>
-              <a href="#" className="text-gray-400 hover:text-white text-base transition-all">About</a>
+              <a href="#" className="text-gray-400 hover:text-white text-base transition-all">First building of Lane no. - 7 Gali, No.2, Chandmari Rd, Kankarbagh, Patna, Bihar 800020</a>
             </li>
             <li>
               <a href="#" className="text-gray-400 hover:text-white text-base transition-all">Privacy Policy</a>
@@ -47,7 +49,7 @@ function Footer() {
           </ul>
         </div>
         <div className="flex items-center lg:justify-center">
-          <a href='#'><img src="https://yt3.googleusercontent.com/lupLP_XKwS4oxXpQ4WT4CcBngAUb3PruvFvM4gdXH5lOC2h_9sCfF2PsxOun5O3dFCGwaq7B=s900-c-k-c0x00ffffff-no-rj" alt="logo" className='w-60' /></a>
+          <a href='#'><img src={logo} alt="logo" className='w-40 brightness-100 contrast-200' /></a>
         </div>
       </div>
       <hr className="my-8 border-gray-700" />

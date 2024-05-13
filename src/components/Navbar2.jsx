@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import 'flowbite-react'
+import logo from '../assets/school_pics/logo.png'
 
 import { Transition } from "@headlessui/react";
 import { Link } from 'react-router-dom';
@@ -26,11 +27,13 @@ function Navbar2() {
     return (
        
 
-        <nav className="bg-[#355E3B] text-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+        <nav className="bg-[#4CAF50] opacity-80 text-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
                 <a to="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">St Marx Acadmey</span>
+                    <div className=' overflow-auto'>
+                        <img src={logo} className="w-14 object-fill brightness-100 contrast-150 " alt="Flowbite Logo" />
+                    </div>
+                    <span id='st-marx' className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">St Marx Acadmey</span>
                 </a>
                 {/* <button data-collapse-toggle="mega-menu-full-image" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu-full-image" aria-expanded="false">
                     <span className="sr-only">Open main menu</span>
@@ -77,7 +80,7 @@ function Navbar2() {
                             <Link to={'/events'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Events</Link>
                         </li>
                         <li>
-                            <Link to={'/galary'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Galary</Link>
+                            <Link to={'/gallery'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Gallery</Link>
                         </li>
                         <li>
                             <Link to={'/contact'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
@@ -87,7 +90,7 @@ function Navbar2() {
             </div>
             <div id="mega-menu-full-image-dropdown" className={`mt-1 bg-[#355E3B] border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 ${isDropdownOpen ? 'block' : 'hidden'}`}>
                 <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-white dark:text-white md:grid-cols-3 md:px-6">
-                    <ul className="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
+                    <ul className=" mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
                         <li>
                             <Link to={'/about'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 About us
@@ -131,18 +134,13 @@ function Navbar2() {
                             </Link>
                         </li>
                     </ul>
-                    <a to="#" className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" >
+                    {/* <a to="#" className="p-8 bg-local bg-yellow-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken z-50" >
                         <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">We Are St Marx Acadmey</p>
-                        {/* <button type="button" className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
+                        
+                        <Link to={'/about'}><button className='inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700'>
                             Get started
-                            <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                            </svg>
-                        </button> */}
-                        <button className='inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700'>
-                            Get started
-                        </button>
-                    </a>
+                        </button></Link>
+                    </a> */}
                 </div>
             </div>
         </nav>

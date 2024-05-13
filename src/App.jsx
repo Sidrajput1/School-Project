@@ -17,6 +17,9 @@ import Uniform from './components/pages/Uniform'
 import Event from './components/pages/Event'
 import Calendar from './components/pages/Calendar'
 import Testimonial from './components/pages/Testimonial'
+import Header from './components/Header'
+import Coming from './components/pages/Coming'
+import Enroll from './components/pages/Enroll'
 
 //import '@fullcalendar/interaction/main.css';
 
@@ -30,11 +33,12 @@ function App() {
 
   return (
     <>
+      <Header/>
       <Navbar2 />
       <Routes>
         <Route path='/' element={<HomeSlider/>}></Route>
         <Route path='/about' element={<About/>}></Route>
-        <Route path='/galary' element={<Galary/>}></Route>
+        <Route path='/gallery' element={<Galary/>}></Route>
         <Route path='/events' element={<Event/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/vision' element={<Vision/>}></Route>
@@ -44,6 +48,8 @@ function App() {
           <Calendar events={events} />
         </>} />
         <Route path='/tetimonial' element={<Testimonial/>}></Route>
+        <Route path='*' element={<Coming/>}></Route>
+        <Route path='/enroll' element={<Enroll/>}></Route>
       </Routes>
       <Footer/>
     </>

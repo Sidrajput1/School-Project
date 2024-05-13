@@ -136,46 +136,27 @@ function Testimonial() {
         },
         {
             id: 3,
-            name: 'Diana',
-            role: 'Product Manager',
+            name: 'Rupa Sharma',
+            role: 'Mother',
             avatar: 'https://i.pravatar.cc/150?img=41',
-            review: `It's very easy to customize and categorize lists for new projects/task categories.`,
+            review: `St Marx School is a wonderful, nurturing school with a rigorous and purposeful academic curriculum. While we don’t speak English at home, it has been so amazing to see our son pick up the language through the immersion program. We also love that the school focuses on developing social and emotional intelligence as much as literacy, maths and science in the early primary years. The teachers are fantastic and the entire St. Marx community has been warm and welcoming since Day 1. I would definitely recommend St marx!”`,
         },
         {
             id: 13,
-            name: 'Ethan',
-            role: 'Software Engineer',
+            name: 'Pk jha',
+            role: 'Father',
             avatar: 'https://i.pravatar.cc/150?img=57',
-            review: `An adventure for the curious mind. Every click led to a new discovery. It's like a digital journey through the wonders of the internet.`,
+            review: ``,
         },
         {
             id: 4,
-            name: 'Fiona',
-            role: 'Marketing Specialist',
-            avatar: 'https://i.pravatar.cc/150?img=42',
-            review: `Plan, create, and explore seamlessly. This service made my creative dreams a reality. Smooth navigation, and the recommendations were spot on.`,
+            name: 'Arvind Keshari',
+            role: 'Father',
+            avatar: '',
+            review: `St Marx School is a wonderful, nurturing school with a rigorous and purposeful academic curriculum. While we don’t speak English at home, it has been so amazing to see our son pick up the language through the immersion program. We also love that the school focuses on developing social and emotional intelligence as much as literacy, maths and science in the early primary years. The teachers are fantastic and the entire St. Marx community has been warm and welcoming since Day 1. I would definitely recommend St marx!”`,
         },
-        {
-            id: 10,
-            name: 'George',
-            role: 'Software Developer',
-            avatar: 'https://i.pravatar.cc/150?img=21',
-            review: `A game-changer for organization. Tasks, calendars, notes – everything neatly synced. My life has never been this streamlined. Pure genius!`,
-        },
-        {
-            id: 11,
-            name: 'Hannah',
-            role: 'Graphic Designer',
-            avatar: 'https://i.pravatar.cc/150?img=18',
-            review: `Drowning in a sea of creativity. The content here is a visual feast. An endless source of inspiration for my artistic endeavors.`,
-        },
-        {
-            id: 5,
-            name: 'Ian',
-            role: 'CTO',
-            avatar: 'https://i.pravatar.cc/150?img=33',
-            review: `Discovering new beats is addictive with this service. The curated playlists are spot-on, and the personalized recommendations are eerily accurate. A music lover's paradise!`,
-        },
+        
+        
     ];
 
     const renderReviews = () => {
@@ -256,11 +237,21 @@ function Testimonial() {
     return (
         <div>
             <ShortIntro />
-            <div className="bg-gradient-to-tr from-slate-200 to-slate-50 text-slate-800 flex flex-col justify-center items-center min-h-screen relative px-4">
-                <main className="bg-[#03fc90] my-4 w-full max-w-2xl rounded-3xl text-center p-8 sm:p-16 ease-in-out">
-                    <h1 className="text-4xl font-bold font-serif">Some words from Parents</h1>
+            <div className=" text-slate-800 flex flex-col justify-center items-center min-h-screen  relative px-4"
+                style={{
+                    background:"url('https://img.freepik.com/free-vector/watercolor-soft-earth-tones-background_23-2151155641.jpg?w=900&t=st=1715581380~exp=1715581980~hmac=68532ab095b336917deeef4050485ce1b2a7c8207bf5469146a86ca54829a744')",
+                    objectFit:"cover",
+                    backgroundRepeat:"no-repeat ",
+                   backgroundPosition:"center",
                    
-                    <p className="text-sm">We've been Provide Education to do their best since 2018</p>
+                   
+                }}
+            >
+                {/* <img src="https://media.istockphoto.com/id/155282720/photo/five-stars.webp?b=1&s=170667a&w=0&k=20&c=G3Y51N4jlmC8KzW7y8LwdavQrFr9xe1sjRWuyVfihA8=" className="" alt="" /> */}
+                <main className="bg-transparent my-4 w-full max-w-2xl rounded-3xl text-center p-8 sm:p-16 ease-in-out">
+                    <h1 id="st-marx" className="text-4xl font-bold font-serif">Some words from Parents</h1>
+                   
+                    <p  className="text-sm text-black">We've been Provide Education to do their best since 2018</p>
 
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-[60px_auto_60px] grid-template-areas:'slider_slider'_'nav-left_nav-right' sm:grid-template-areas:'nav-left_slider_nav-right' gap-2 sm:gap-6 button:rounded-full button:w-10 button:h-10 button:shrink-0 button:text-gray-600 button:text-2xl button:transition-all button:duration-500 button:relative button:isolate button:bg-black sm:button:mt-8 before:button:absolute before:button:inset-px before:button:transition-all before:button:duration-300 before:button:-z-10 before:button:rounded-full hover:before:button:inset-full before:button:bg-white hover:button:text-white hover:button:bg-black hover:button:border-black">
                         <button data-slide="prev" className="button button:grid-area:nav-left material-symbols-outlined">navigate_before</button>
@@ -269,7 +260,7 @@ function Testimonial() {
                                 <div id="list-cards" key={idx} className={`card ${currentCardIndex === idx ? '' : 'hidden'}`}>
                                     <blockquote>{review.review}</blockquote>
                                     <div className="details">
-                                        <img className="rounded-full object-cover px-36 py-2 h-28 " src={review.avatar} alt="Avatar" />
+                                        <img className="rounded-full object-cover md:px-36 px-0 py-2 md:h-28 h-36 md:w-24 w-full" src={review.avatar} alt="Avatar" />
                                         <p>{review.name}</p>
                                         <p>{review.role}</p>
                                     </div>

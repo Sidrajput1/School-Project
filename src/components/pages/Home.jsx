@@ -4,9 +4,11 @@ import SmallGalary from './SmallGalary';
 import Message from './Message';
 import NumberCount from '../NumberCount';
 import Testimonial from './Testimonial';
+import SliderGallery from './SliderGallery';
+import ResultSlide from './ResultSlide';
 
 function Home() {
-    const values = [500, 10, 25]
+    // const values = [500, 10, 25]
     return (
         // <div className='h-[90vh] w-full'>
         //     <div className="carousel w-full h-[90vh]">
@@ -46,14 +48,23 @@ function Home() {
         // </div>
         <div>
             <div id='box1' className='w-full min-h-[70vh] md:mt-0 mt-3 flex justify-around flex-col items-center'>
-                <div className=' '>
-                    <p className='text-black font-semibold text-xl max-w-2xl line-clamp-6 text-justify font-sans italic '>
-                        The St Marx School is one of the best private day schools in Patna. We are a coeducational elementary and middle school for children from early education through eighth grade. Our school is recognized for its supportive and engaging community that promotes academic excellence and creates a strong foundation for each child's future achievement.
+                <div className='wall py-6 w-full h-96 '>
+                    <p id='paragraph' className='text-white md:mx-auto mx-0 font-thin md:text-xl text-sm md:max-w-2xl max-w-xl md:line-clamp-6 line-clamp-8 md:text-justify text-center font-sans md:px-0 px-4'>
+                        The St Marx School is one of the best private day schools in Patna. We are a coeducational elementary and middle school for children from early education through 10th grade. Our school is recognized for its supportive and engaging community that promotes academic excellence and creates a strong foundation for each child's future achievement.
                     </p>
-                   
-                    <h2 className='text-6xl text-[#008000] text-center py-6 font-serif'>Our Toppers</h2>
+                    <div className='sign md:top-[310%] top-[265%] md:text-[6em] text-[3em]'>
+                        {/* <h2 className='md:text-6xl text-3xl text-[#008000] text-center md:py-6 py-3 md:mt-0 mt-2 font-serif'>Our Toppers</h2> */}
+                        <span className="fast-flicker">T</span>OPP<span className="flicker">E</span>RS
+                    </div>
                 </div>
-                <marquee className='shadow-xl' width="100%" behavior="scroll" direction="left">
+                {/* <div className=' w-[90vh] h-[40vh] top-20'>
+                        <ResultSlide/>
+                    </div> */}
+                <div className='text-center md:py-12 py-4'>
+                    <ResultSlide />
+                </div>
+
+                {/* <marquee className='shadow-xl' width="100%" behavior="scroll" direction="left">
                     <div className='flex flex-row gap-10'>
                         <div>
                             <img className='w-[120px] h-[150px]' src="https://i.pinimg.com/736x/a3/7b/e5/a37be5b9709175f1527761157463ec38.jpg" />
@@ -79,13 +90,16 @@ function Home() {
                             <img className='w-[120px] h-[150px]' src="https://pbs.twimg.com/media/EeUI99bUcAMiRFa.jpg:large" alt="" />
                         </div>
                     </div>
-                </marquee>
+                </marquee> */}
 
             </div>
-           
+
             <hr className='mt-0' />
-            <SmallGalary />
+            {/* <SmallGalary /> */}
             <Message />
+
+
+            <SliderGallery />
             {/* <div className='flex justify-around items-center w-full h-[40vh] '>
                 <NumberCount number={50} title="Faculty" />
                 <NumberCount number={500} title="Students" />
@@ -94,7 +108,7 @@ function Home() {
 
 
             </div> */}
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full md:h-[40vh] h-[120vh]'>
+            {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full md:h-[40vh] h-[120vh]'>
                 <div className='col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1'>
                     <NumberCount number={50} title="Faculty" />
                 </div>
@@ -107,7 +121,7 @@ function Home() {
                 <div className='col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1'>
                     <NumberCount number={15} title="Programs" />
                 </div>
-            </div>
+            </div> */}
 
 
             <Testimonial />
