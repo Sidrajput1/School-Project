@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
@@ -15,6 +16,8 @@ function Header() {
                 </a> */}
 
                 <div className="space-x-6 md:absolute md:right-10 flex items-center max-md:ml-auto">
+
+                    <Link to={'*'}><button className='btn rounded-3xl bg-amber-200 my-1'>LogIn</button></Link>
                     
                     <a href="https://www.facebook.com/p/ST-MARX-Academy-PATNA-100077192755453/" target='_blank'><button type="button"
                         className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600">

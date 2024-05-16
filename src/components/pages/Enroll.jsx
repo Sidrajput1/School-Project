@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import 'aos/dist/aos.css';
 
+import Aos from 'aos';
 function Enroll() {
+    useEffect( ()=> {
+        Aos.init({
+            
+        })
+    },[])
     return (
-        <div  className="image-container relative md:bottom-0 bottom-[-100px]">
+        <div  className="image-container relative md:bottom-0 bottom-[-100px]" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <img className='block w-[100%] h-auto md:object-contain ' style={{ filter: 'blur(2px)' }} src="https://img.freepik.com/free-photo/handwriting-paper-pen-pencil-nearby-generated-by-ai_188544-37370.jpg?t=st=1714651241~exp=1714654841~hmac=3eab1c46484282f61f5ec47ad104e3f251651a41b5491e9579c35f44bbca3b3e&w=1060" alt="Your Image" />
             <div className="absolute top-0  left-0 w-[100%] h-[100%]  bg-gradient-to-b from-blue-200 via-blue-200 to-blue-300 mix-blend-overlay">
 
             </div>
             <div className=" md:absolute relative md:top-[40%] top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white ">
                 <div className=''>
-                    <h1 className="md:text-7xl text-2xl tracking-widest font-bold text-[#008000] line-clamp-1 md:max-w-[60rem] max-w-sm md:py-4 py-0">ENROLL TODAY !</h1>
+                    <h1 className="md:text-7xl text-2xl tracking-widest font-bold text-[#008000] brightness-200 line-clamp-1 md:max-w-[60rem] max-w-sm md:py-4 py-0">ENROLL TODAY !</h1>
                     <p className="md:text-3xl text-sm  line-clamp-2 max-w-xl  md:py-8 pb-0 md:pb-16 py-3">Currently serving students in St Marx through 10th grade.</p>
                 </div>
                 <form className="md:p-6 p-0 xl:p-10  text-black md:overflow-auto  overflow-hidden ">

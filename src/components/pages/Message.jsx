@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 
 function Message() {
+    useEffect(()=> {
+        Aos.init({
+
+        })
+    },[])
     return (
         <div id='principal_box' className="grid sm:grid-cols-2 items-center  gap-4 font-[sans-serif] text-[#333]  max-w-full mx-auto mb-4">
-            <div className="sm:h-[400px] px-4 max-sm:pt-4">
+            <div className="sm:h-[400px] px-4 max-sm:pt-4" data-aos="zoom-in" data-aos-delay="300"  data-aos-easing="ease-in">
                 <img src="https://readymadeui.com/profile_2.webp" className="w-full h-full object-contain  rounded-xl" />
             </div>
-            <div className="p-4">
+            <div className="p-4" data-aos="fade-right">
                 <h3 id='st-marx' className="text-5xl font-semibold">Principal's Message</h3>
                 <p className="mt-4 text-lg text-white">We aim to provide every child with a truly holistic education while ensuring they have a joyful and exuberant schooling experience at St. Marx Academy campus.
  </p>

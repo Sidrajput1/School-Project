@@ -11,9 +11,9 @@ function Uniform() {
                     <p className='text-lg font-semibold py-4'>Students are required to attend school in clean and complete uniform on all working days.</p>
                 </header>
                 <div className='py-16'>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col ">
                         <h2 className="text-xl font-bold mb-4">Boys</h2>
-                        <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg mb-4">
+                        <div className="shadow overflow-scroll border-b border-gray-200 sm:rounded-lg mb-4">
                             <table className="min-w-full divide-y divide-gray-200">
                                 <thead className="bg-gray-50">
                                     <tr>
@@ -37,7 +37,7 @@ function Uniform() {
                         </div>
 
                         <h2 className="text-xl font-bold my-4">Girls</h2>
-                        <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                        <div className="shadow overflow-scroll border-b border-gray-200 sm:rounded-lg">
                             <table className="min-w-full divide-y divide-gray-200">
                                 <thead className="bg-gray-50">
                                     <tr>

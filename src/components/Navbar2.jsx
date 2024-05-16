@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'flowbite-react'
 import logo from '../assets/school_pics/logo.png'
 
@@ -15,19 +15,46 @@ function Navbar2() {
     // };
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScroll, setIsScrolled] = useState(false)
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
+    const closeDropDown = () => {
+        setIsDropdownOpen(false)
+    }
+
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
-        console.log('clicked')
+        
     };
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false)
+    }
+
+     useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            if(scrollTop>30){
+                setIsScrolled(true)
+            }else{
+                setIsScrolled(false)
+            }
+        };
+        window.addEventListener('scroll',handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll',handleScroll)
+        }
+
+     },[]);
+
+    
     return (
        
 
-        <nav className="bg-[#4CAF50] opacity-80 text-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+        <nav className={` opacity-80 text-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 ${isScroll? `bg-slate-800 `:`bg-[#4CAF50] `} `}>
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
                 <a to="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <div className=' overflow-auto'>
@@ -56,7 +83,7 @@ function Navbar2() {
                 <div id="mega-menu-full-image" className={`items-center justify-between  w-full md:flex md:w-auto md:order-1 ${isMobileMenuOpen ? 'block' : 'hidden'} `}>
                     <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse ">
                         <li>
-                            <Link to={'/'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</Link>
+                            <Link to={'/'} onClick={closeMobileMenu} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</Link>
                         </li>
                        
 
@@ -77,13 +104,13 @@ function Navbar2() {
                             </button>
                         </li>
                         <li>
-                            <Link to={'/events'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Events</Link>
+                            <Link to={'/events'} onClick={closeMobileMenu} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Events</Link>
                         </li>
                         <li>
-                            <Link to={'/gallery'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Gallery</Link>
+                            <Link to={'/gallery'} onClick={closeMobileMenu} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Gallery</Link>
                         </li>
                         <li>
-                            <Link to={'/contact'} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
+                            <Link to={'/contact'} onClick={closeMobileMenu} className="block py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
                         </li>
                     </ul>
                 </div>
@@ -92,44 +119,44 @@ function Navbar2() {
                 <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-white dark:text-white md:grid-cols-3 md:px-6">
                     <ul className=" mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
                         <li>
-                            <Link to={'/about'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/about'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 About us
                             </Link>
                         </li>
                         <li>
-                            <Link to={'/tetimonial'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/tetimonial'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 What Parents Says About us
                             </Link>
                         </li>
                         <li>
-                            <Link to={'/vision'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/vision'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 Our vision
                             </Link>
                         </li>
                         <li>
-                            <Link to={'/admisson'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/admisson'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 Admissons
                             </Link>
                         </li>
                     </ul>
                     <ul className="mb-4 space-y-4 md:mb-0">
                         <li>
-                            <Link to={'/about/uniform'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/about/uniform'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                Uniform
                             </Link>
                         </li>
                         <li>
-                            <Link to={'/rules'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/rules'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 Rules & Regulations
                             </Link>
                         </li>
                         <li>
-                            <Link to={'/calendar'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/calendar'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 Calendar
                             </Link>
                         </li>
                         <li>
-                            <Link to={'/results'} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <Link to={'/results'} onClick={closeDropDown} className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
                                 Results
                             </Link>
                         </li>

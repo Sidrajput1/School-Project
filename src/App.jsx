@@ -1,6 +1,4 @@
-//import '@fullcalendar/core/main.css';
-//import '@fullcalendar/daygrid/main.css';
-//import '@fullcalendar/interaction/main.css';
+
 
 import './App.css'
 
@@ -21,7 +19,7 @@ import Header from './components/Header'
 import Coming from './components/pages/Coming'
 import Enroll from './components/pages/Enroll'
 
-//import '@fullcalendar/interaction/main.css';
+
 
 function App() {
   
@@ -30,8 +28,14 @@ function App() {
     { title: 'Event 2', date: '2024-04-30' },
     {title:'Summer Holiday', date:'2024-05-15'}
   ]
+  // const initialOptions = {
+  //   "client-id": "AbKr4QlHgxgo1VG80TJRT8HIwOs4oemBr56goGd9UJILDVn0Hcl4HOOqwjFoDn8qxZ61orhzxlew_1kZ",
+  //   currency: "INR",
+  //   intent: "capture",
+  // };
 
   return (
+   
     <>
       <Header/>
       <Navbar2 />
@@ -50,9 +54,12 @@ function App() {
         <Route path='/tetimonial' element={<Testimonial/>}></Route>
         <Route path='*' element={<Coming/>}></Route>
         <Route path='/enroll' element={<Enroll/>}></Route>
+       
       </Routes>
       <Footer/>
-    </>
+      </>
+       
+   
   )
 }
 

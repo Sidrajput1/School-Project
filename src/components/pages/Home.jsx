@@ -49,10 +49,10 @@ function Home() {
         <div>
             <div id='box1' className='w-full min-h-[70vh] md:mt-0 mt-3 flex justify-around flex-col items-center'>
                 <div className='wall py-6 w-full h-96 '>
-                    <p id='paragraph' className='text-white md:mx-auto mx-0 font-thin md:text-xl text-sm md:max-w-2xl max-w-xl md:line-clamp-6 line-clamp-8 md:text-justify text-center font-sans md:px-0 px-4'>
+                    <p id='paragraph' className='text-white relative md:mx-auto mx-0 font-thin md:text-xl text-sm md:max-w-2xl max-w-xl md:line-clamp-6 line-clamp-8 md:text-justify text-center font-sans md:px-0 px-4'>
                         The St Marx School is one of the best private day schools in Patna. We are a coeducational elementary and middle school for children from early education through 10th grade. Our school is recognized for its supportive and engaging community that promotes academic excellence and creates a strong foundation for each child's future achievement.
                     </p>
-                    <div className='sign md:top-[310%] top-[265%] md:text-[6em] text-[3em]'>
+                    <div className='sign md:top-[80%] absolute top-[80%] md:text-[6em] text-[4em]'>
                         {/* <h2 className='md:text-6xl text-3xl text-[#008000] text-center md:py-6 py-3 md:mt-0 mt-2 font-serif'>Our Toppers</h2> */}
                         <span className="fast-flicker">T</span>OPP<span className="flicker">E</span>RS
                     </div>
@@ -130,4 +130,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home;
