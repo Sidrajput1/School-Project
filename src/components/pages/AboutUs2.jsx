@@ -12,7 +12,7 @@ function AboutUs2() {
         <div data-theme="dark">
             <div className="pl-20 pt-10 flex flex-col text-white">
                 {/* creating the about page main section */}
-                <div className="flex items-center gap-5 mx-10">
+                <div className="flex md:flex-row items-center gap-5 mx-10">
                     {/* out moto section */}
                     <section className="w-1/2 space-y-10">
                         <h1 className="text-5xl text-yellow-500 font-semibold">
@@ -28,7 +28,7 @@ function AboutUs2() {
                     </section>
 
                     {/* our moto image section */}
-                    <div className="w-1/2">
+                    <div className="md:w-1/2 w-full">
                         <img
                             id="test1"
                             style={{
@@ -42,7 +42,7 @@ function AboutUs2() {
                 </div>
 
                 {/* top personalities quotes section */}
-                <div className="carousel m-auto w-1/2 my-16">
+                <div className="carousel m-auto md:w-1/2 w-full my-16">
                     <div id="slide1" className="carousel-item relative w-full">
                         <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
                             {/* for personality image */}

@@ -15,10 +15,10 @@ function ShortIntro() {
                 <div className="relative z-10 p-10 lg:p-20 text-white">
                     <div className="text-center md:p-[7rem] pt-[10rem]">
                         <h2 id='st-marx' className="text-2xl lg:text-8xl text-[#008000] z-50 font-extrabold tracking-wide mb-4">
-                              St Marx Acadmey
+                              St Marx Academy
                         </h2>
                         <p id='outline' className="text-lg lg:text-2xl mb-6">
-                            Educating Minds, Empowering Lives
+                            Managed By: PRABSIVS SAMAJ KALYAN EVUM SHIKSHAN SANSTHA
                         </p>
                         {/* <p className="text-lg lg:text-xl">
                             Discover our commitment to excellence in education and community

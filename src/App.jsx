@@ -3,7 +3,7 @@
 import './App.css'
 
 import { Routes,Route } from 'react-router-dom'
-
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import HomeSlider from './components/pages/HomeSlider'
 import About from './components/pages/About'
 import Footer from './components/Footer'
@@ -18,6 +18,10 @@ import Testimonial from './components/pages/Testimonial'
 import Header from './components/Header'
 import Coming from './components/pages/Coming'
 import Enroll from './components/pages/Enroll'
+import logo from '../src/assets/school_pics/logo.png'
+import MyLiveChat from './components/MyLiveChat'
+
+
 
 
 
@@ -56,6 +60,16 @@ function App() {
         <Route path='/enroll' element={<Enroll/>}></Route>
        
       </Routes>
+      <FloatingWhatsApp 
+        phoneNumber='919308467268'
+        accountName='St Marx Academy'
+        placeholder='Send Message'
+        avatar={logo}
+        darkMode='true'
+      />
+      <div >
+      <MyLiveChat/>
+      </div>
       <Footer/>
       </>
        

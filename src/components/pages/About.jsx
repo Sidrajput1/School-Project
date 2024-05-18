@@ -38,7 +38,7 @@ function About() {
             <div  className='w-full ml-10 min-h-[70vh] mt-10 flex justify-between items-start '>
                 <div className=''>
                     <figure className='float-right w-[50%] h-fit p-8 '>
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipNDxYjIZqYx_RwmSO-up8VyZE5vicYIGxHph4ut=s680-w680-h510" alt="building2" className='max-w-[80%] max-h-[70vh] object-cover shadow-2xl border-b-2 rounded-xl ' />
+                        <img src="https://content3.jdmagicbox.com/comp/patna/m6/0612px612.x612.101201160929.i4m6/catalogue/st-marx-academy-kankarbagh-patna-schools-pi2rxlpukw.jpg" alt="building2" className='max-w-[80%] max-h-[70vh] object-cover shadow-2xl border-b-2 rounded-xl ' />
                     </figure>
                     <section className='w-[90%] p-4  text-justify bg-transparent'>
                         <p className='text-gray-500 text-lg'>

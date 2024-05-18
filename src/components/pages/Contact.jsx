@@ -1,18 +1,19 @@
 import React from 'react'
-import { MapContainer, TileLayer,Marker,Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import ShortIntro from '../ShortIntro'
+import Form from './Form'
 
 function Contact() {
     return (
         <div>
-            <ShortIntro/>
+            <ShortIntro />
             <div
-                className="grid md:grid-cols-1 items-center overflow-hidden shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white my-6 font-[sans-serif]">
-                <div className="sm:p-10 max-sm:px-4 max-sm:py-8 bg-gray-900">
-                    <h2 className="text-3xl font-extrabold text-white">Get In <span className="text-yellow-500">Touch</span></h2>
-                    <p className="text-sm text-gray-400 mt-3">Have a specific inquiry or looking to explore new opportunities? Our
-                        experienced team is ready to engage with you.</p>
-                    <form>
+                className="grid md:grid-cols-1 items-center overflow-hidden shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-7xl mx-auto bg-white my-6 font-[sans-serif]">
+                <div className="border-2  sm:p-10 max-sm:px-4 max-sm:py-8 ">
+                    <h2 className="text-3xl font-extrabold text-green">Stay In <span className="text-yellow-500">Touch</span></h2>
+                    <p className="text-sm text-gray-400 mt-3">Have a specific inquiry or looking to explore new opportunities? We Will get back to you ASAP
+                        .</p>
+                    {/* <form>
                         <div className="space-y-4 mt-8">
                             <input type="text" placeholder="Full Name"
                                 className="px-2 py-3 bg-transparent text-white w-full text-sm border-b border-gray-400 focus:border-white outline-none" />
@@ -44,8 +45,11 @@ function Contact() {
                             </svg>
                             Send Message
                         </button>
-                    </form>
-                    <ul className="mt-4 flex justify-center lg:space-x-6 max-lg:flex-col max-lg:items-center max-lg:space-y-2 ">
+                    </form> */}
+
+                    <Form />
+
+                    {/* <ul className="mt-4 flex justify-center lg:space-x-6 max-lg:flex-col max-lg:items-center max-lg:space-y-2 ">
                         <li className="flex items-center text-yellow-500">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='currentColor'
                                 viewBox="0 0 479.058 479.058">
@@ -68,7 +72,7 @@ function Contact() {
                                 <strong>+158 996 888</strong>
                             </a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="z-10 relative h-full max-md:min-h-[350px]">
                     {/* <iframe src=""

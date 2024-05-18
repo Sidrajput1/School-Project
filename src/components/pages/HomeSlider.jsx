@@ -10,6 +10,7 @@ import Enroll from './Enroll';
 import 'aos/dist/aos.css';
 
 import Aos from 'aos';
+import Promise from './Promise';
 
 
 
@@ -73,7 +74,7 @@ function HomeSlider() {
                         <Link to={'/enroll'}><button className='enroll md:text-lg text-white text-sm md:ml-[rem]  md:w-[20%] w-full hover:bg-yellow-300 transition-all ease-in-out duration-300 cursor-pointer hover:w-[90%] hover:text-3xl '>ENROLL NOW</button></Link>
                     </div>
 
-                    <div className='md:w-[90%] h-auto w-full md:flex md:flex-row  grid grid-flow-row grid-cols-2 md:py-16 py-1 px-4  items-center md:mx-16 mx-0 z-50' data-aos="zoom-in-down" >
+                    <div className='md:w-[90%] h-auto md:gap-0 gap-10 w-full md:flex md:flex-row flex-wrap  grid grid-flow-row grid-cols-2 md:py-8 py-6 px-4  items-center md:mx-16 mx-0 z-50' data-aos="zoom-in-down" >
                         <div data-aos="fade-down-left " data-aos-delay="1000" data-aos-duration="1000"
                             className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full md:max-w-[17rem] max-w-[9rem] md:h-64 h-auto rounded-3xl font-[sans-serif] overflow-hidden mx-auto md:mt-4 mt-2 ">
                             <div className="px-4 my-6">
@@ -87,7 +88,7 @@ function HomeSlider() {
                             </div>
                         </div>
                         <div
-                            className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full md:max-w-[17rem] max-w-[9rem] md:h-64 h-auto rounded-3xl font-[sans-serif] overflow-hidden mx-auto md:mt-4 mt-2">
+                            className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full md:max-w-[17rem] max-w-[9rem] md:h-64 h-auto rounded-3xl font-[sans-serif] overflow-hidden mx-auto md:mt-4 mt-0 z-100 ">
                             <div className="px-4 my-6 ">
                                 <img src="https://html.merku.love/shelly/assets/img/icon7.png" className='inline pl-20 pb-2 ' alt="" />
                                 <h3 className="text-lg font-semibold text-center ">10th Certificate</h3>
@@ -125,7 +126,8 @@ function HomeSlider() {
                     </div>
                 </div>
             </div>
-            <Enroll />
+            {/* <Enroll /> */}
+            <Promise/>
             <Home />
         </div>
 
