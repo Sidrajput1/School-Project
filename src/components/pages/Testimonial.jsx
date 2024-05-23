@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import 'material-symbols';
-import ShortIntro from '../ShortIntro'
-import Promise from "./Promise";
+
+import Enroll from "./Enroll";
 
 
 // function Testimonial() {
@@ -237,7 +237,7 @@ function Testimonial() {
 
     return (
         <div>
-            <Promise/>
+           <Enroll/>
             <div className=" text-slate-800 flex flex-col justify-center items-center min-h-screen  relative px-4"
                 style={{
                     background:"url('https://img.freepik.com/free-vector/watercolor-soft-earth-tones-background_23-2151155641.jpg?w=900&t=st=1715581380~exp=1715581980~hmac=68532ab095b336917deeef4050485ce1b2a7c8207bf5469146a86ca54829a744')",

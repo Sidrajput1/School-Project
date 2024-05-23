@@ -23,13 +23,10 @@ function About() {
                         <h2 id='st-marx' className="text-2xl lg:text-5xl font-extrabold tracking-tight md:mb-4 mb-2">
                             Welcome to Our School
                         </h2>
-                        <p id='outline' className="text-sm lg:text-xl md:mb-6 mb-2">
-                            Educating Minds, Empowering Lives
+                        <p id='outline' className="text-lg lg:text-2xl mb-6">
+                            Managed By: PRABSIVG SAMAJ KALYAN EVUM SHIKSHAN SANSTHA
                         </p>
-                        <p className="text-lg lg:text-xl">
-                            Discover our commitment to excellence in education and community
-                            engagement.
-                        </p>
+                        
                     </div>
 
                 </div>

@@ -82,7 +82,7 @@ const Ball = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container overflow-hidden ">
       {balls.map(ball => (
         <div
           key={ball.id}

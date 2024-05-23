@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import './home.css'
 import Home from './Home'
 
-import Enroll from './Enroll';
+
 
 import 'aos/dist/aos.css';
 
 import Aos from 'aos';
 import Promise from './Promise';
+import PromiseSchool from './Promise';
 
 
 
@@ -74,7 +75,7 @@ function HomeSlider() {
                         <Link to={'/enroll'}><button className='enroll md:text-lg text-white text-sm md:ml-[rem]  md:w-[20%] w-full hover:bg-yellow-300 transition-all ease-in-out duration-300 cursor-pointer hover:w-[90%] hover:text-3xl '>ENROLL NOW</button></Link>
                     </div>
 
-                    <div className='md:w-[90%] h-auto md:gap-0 gap-10 w-full md:flex md:flex-row flex-wrap  grid grid-flow-row grid-cols-2 md:py-8 py-6 px-4  items-center md:mx-16 mx-0 z-50' data-aos="zoom-in-down" >
+                    <div className='md:w-[90%] h-auto md:gap-0 gap-10 w-full md:flex md:flex-row flex-wrap  grid grid-flow-row grid-cols-2 md:py-16 py-6 px-4  items-center md:mx-16 mx-0 z-50' data-aos="zoom-in-down" >
                         <div data-aos="fade-down-left " data-aos-delay="1000" data-aos-duration="1000"
                             className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full md:max-w-[17rem] max-w-[9rem] md:h-64 h-auto rounded-3xl font-[sans-serif] overflow-hidden mx-auto md:mt-4 mt-2 ">
                             <div className="px-4 my-6">
@@ -127,7 +128,10 @@ function HomeSlider() {
                 </div>
             </div>
             {/* <Enroll /> */}
-            <Promise/>
+            <div className='md:min-h-[150vh] h-auto md:py-36 md:mt-0 mt-[28rem] py-8 '>
+                <PromiseSchool/>
+            </div>
+            
             <Home />
         </div>
 

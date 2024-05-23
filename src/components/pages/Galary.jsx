@@ -20,8 +20,8 @@ function Galary() {
                         <h2 id='st-marx' className="text-2xl lg:text-5xl font-extrabold tracking-tight md:py-6 py-1">
                             Welcome to Our Gallery
                         </h2>
-                        <p id='outline' className="text-lg lg:text-xl mb-6">
-                            Educating Minds, Empowering Lives
+                        <p id='outline' className="text-lg lg:text-2xl mb-6">
+                            Managed By: PRABSIVG SAMAJ KALYAN EVUM SHIKSHAN SANSTHA
                         </p>
                         {/* <p className="text-lg lg:text-xl">
                             Discover our commitment to excellence in education and community

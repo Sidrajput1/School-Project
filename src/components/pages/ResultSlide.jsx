@@ -14,7 +14,7 @@ function ResultSlide() {
         })
     },[])
     return (
-        <div data-aos="flip-down" className="carousel  carousel-center max-w-[70rem] p-4 space-x-4 bg-neutral rounded-box">
+        <div data-aos="flip-down" className="carousel   carousel-center md:max-w-[80rem] max-w-[20rem] border-2 p-4 space-x-4 bg-black rounded-box">
             <div className="carousel-item flex flex-col justify-around">
                 <img src="https://i.pinimg.com/736x/a3/7b/e5/a37be5b9709175f1527761157463ec38.jpg" className="rounded-box h-64" />
                 <div className='text-white'>

@@ -67,7 +67,7 @@
     width:20px;
     height:20px;
     border-radius:50%;
-    background:rgb(2, 48, 66);
+    /* background:rgb(2, 48, 66); */
 }
 
 .division_4 .cards:before{

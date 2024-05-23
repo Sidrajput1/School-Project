@@ -23,15 +23,15 @@
 
 #outline{
   background-clip: text;
-	color: #ffdd40;
+	color: rgb(255, 111, 0);
 	animation: outline 1s ease-in-out 1.5s forwards;
 }
 @keyframes outline {
 	from {
-		text-shadow: 0em -7em 10em #fff;
+		text-shadow: 0em -7em 10em orange;
 	}
 	to {
-		text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
+		text-shadow: 0 0.02em red, 0.02em 0 orange, -0.02em 0 orange, 0 -0.02em orange;
 	}
 }
 
