@@ -50,7 +50,7 @@ function Home() {
             <div  className='w-full min-h-[80vh] md:mt-0 mt-3 py-16 flex justify-around flex-col items-center'>
                 <div className='wall py-8  w-full md:h-[30rem] h-auto  '>
                     <p id='paragraph' className='text-gray-200 md:pb-0 pb-16 md:mb-0 mb-16  relative md:mx-auto mx-0 font-semibold brightness-100 md:text-xl text-sm md:max-w-2xl max-w-xl md:line-clamp-6 line-clamp-8 md:text-justify text-center font-sans md:px-0 px-4'>
-                        The St Marx School is one of the best private day schools in Patna. We are a coeducational elementary and middle school for children from early education through 10th grade. Our school is recognized for its supportive and engaging community that promotes academic excellence and creates a strong foundation for each child's future achievement.
+                        The St Marx Academy is one of the best private day schools in Patna. We are a coeducational elementary and middle school for children from early education through 10th grade. Our school is recognized for its supportive and engaging community that promotes academic excellence and creates a strong foundation for each child's future achievement.
                     </p>
                     <div className='sign md:top-[80%] absolute top-[80%] md:text-[6em] text-[4em]'>
                         {/* <h2 className='md:text-6xl text-3xl text-[#008000] text-center md:py-6 py-3 md:mt-0 mt-2 font-serif'>Our Toppers</h2> */}

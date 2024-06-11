@@ -55,7 +55,7 @@ function Footer() {
       <hr className="my-8 border-gray-700" />
       <div className="sm:flex sm:items-center sm:justify-between sm:flex-row">
         <p className='text-gray-400 text-sm sm:order-1'>© 2023<a href='https://readymadeui.com/' target='_blank'
-          className="hover:underline mx-1">St Marx Acadmey</a>All Rights Reserved.
+          className="hover:underline mx-1">St Marx Academy</a>All Rights Reserved.
         </p>
         <div className="flex space-x-5 max-sm:mt-4">
           <a href="#" className="text-gray-400 hover:text-white text-base transition-all">

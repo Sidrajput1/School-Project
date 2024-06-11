@@ -1,8 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
+import emailjs, { sendForm } from '@emailjs/browser'
 import 'aos/dist/aos.css';
 
 import Aos from 'aos';
+import toast from 'react-hot-toast';
 function Enroll() {
+
+    const form = useRef();
+    const sendEmail =(e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_e6flm3m',
+                'template_3g138ee',
+                form.current,
+                'MZgJP4glOrI-VuKXG'
+
+                    
+            )
+            
+            .then((result) => {
+                console.log(result.text)
+                console.log(sendForm)
+                
+                toast.success("Message Send Sucessfully")
+            },  (error)=>{
+                console.log(error.text);
+              }
+    
+            );
+            e.target.reset()
+    }
+
     useEffect( ()=> {
         Aos.init({
             
@@ -21,25 +51,25 @@ function Enroll() {
                     <h1 className="md:text-7xl  text-2xl tracking-widest font-bold text-[#008000] brightness-200  text-wrap md:max-w-[60rem] max-w-[40rem] md:py-4 py-0">ENROLL TODAY !</h1>
                     <p className="md:text-3xl text-sm  line-clamp-2 max-w-xl  md:py-8 pb-0 md:pb-16 py-3">Currently serving students in St Marx through 10th grade.</p>
                 </div>
-                <form className="md:p-6 p-0 xl:p-10  text-black md:overflow-auto  overflow-hidden ">
+                <form ref={form} onSubmit={sendEmail} className="md:p-6 p-0 xl:p-10  text-black md:overflow-auto  overflow-hidden ">
                     <div className="md:max-w-sm w-full md:flex md:flex-col  md:mx-auto mx-0 md:space-y-8 space-y-3">
                         <div>
-                            <input type='text' placeholder='Name'
+                            <input type='text' name='name' placeholder='Name'
                                 className="w-full  h-10 bg-gray-100 rounded-full py-3  px-6 text-sm outline-none" />
                         </div>
                         <div>
-                            <input type='email' placeholder='Email'
+                            <input type='email' name='email' placeholder='Email'
                                 className="w-full h-10 bg-gray-100 rounded-full py-3 px-6 text-sm outline-none" />
                         </div>
                         <div>
-                            <input type='email' placeholder='Phone No.'
+                            <input type='number' name='number' placeholder='Phone No.'
                                 className="w-full h-10 bg-gray-100 rounded-full py-3 px-6 text-sm outline-none" />
                         </div>
                         <div>
-                            <textarea placeholder='Message' rows="6"
+                            <textarea placeholder='Message' name='message' rows="6"
                                 className="w-full h-10 bg-gray-100 rounded-3xl px-6 text-sm pt-3 outline-none"></textarea>
                         </div>
-                        <button type='button'
+                        <button type='submit'
                             className="text-white w-full relative bg-blue-500 hover:bg-blue-600 font-semibold rounded-full text-sm px-6 py-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#fff' className="mr-2 inline" viewBox="0 0 548.244 548.244">
                                 <path fillRule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clipRule="evenodd" data-original="#000000" />

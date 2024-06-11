@@ -18,8 +18,8 @@ function Message() {
                 <p className="mt-4 text-lg text-white">We aim to provide every child with a truly holistic education while ensuring they have a joyful and exuberant schooling experience at St. Marx Academy campus.
  </p>
                 <div className="mt-8 text-left">
-                    <h4 className="text-sm font-semibold">St Marx acadmey</h4>
-                    <p className="text-xs text-white-400">stmarx@gmail.com</p>
+                    <h4 className="text-sm font-semibold">St Marx Academy</h4>
+                    <p className="text-xs text-white-400">stmarx4@gmail.com</p>
                 </div>
                 <div className="space-x-4 mt-8">
                     <a href="https://www.facebook.com/p/ST-MARX-Academy-PATNA-100077192755453/" target='_blank'><button type="button"

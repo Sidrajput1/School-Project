@@ -2,6 +2,7 @@ import React from 'react'
 import Photos from './Photos'
 import GalaryPage from './GalleryPage'
 import GalleryPage from './GalleryPage'
+import ShowGallery from '../admin/ShowGallery'
 
 function Galary() {
     return (
@@ -33,6 +34,7 @@ function Galary() {
 
             </div>
             <GalleryPage/>
+           
             
         </div>
     )

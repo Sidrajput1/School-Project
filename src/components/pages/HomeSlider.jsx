@@ -10,7 +10,7 @@ import Home from './Home'
 import 'aos/dist/aos.css';
 
 import Aos from 'aos';
-import Promise from './Promise';
+
 import PromiseSchool from './Promise';
 
 
@@ -18,7 +18,7 @@ import PromiseSchool from './Promise';
 const content = [
     {
         title: "St Marx Academy",
-        description: " St Marx Acadmey located at First building of Lane no. - 7 Gali, No.2, Chandmari Rd, Kankarbagh, Patna, Bihar 800020 ",
+        description: " St Marx Academy located at First building of Lane no. - 7 Gali, No.2, Chandmari Rd, Kankarbagh, Patna, Bihar 800020 ",
         button: "Read More",
         image: "https://github.com/VladaWebDev/stemdk_front/blob/master/src/images/hero.jpeg?raw=true",
     },
@@ -54,6 +54,7 @@ function HomeSlider() {
                 <Slider autoplay={3000} className="animateOut slider-wrapper">
                     {content.map((item, index) => (
                         <div
+                           
                             key={index}
                             className="slider-content brightness-200 "
                             style={{ background: `url('${item.image}') no-repeat center center `, height: '100vh', backgroundSize: 'cover', }}

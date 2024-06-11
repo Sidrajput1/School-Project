@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import VideoGal from './VideoGal';
+import ShowGallery from '../admin/ShowGallery';
 
 const GalleryPage = () => {
   // State to keep track of the selected image
@@ -103,6 +104,7 @@ return (
         </div>
       )}
     </div>
+    <ShowGallery/>
     <VideoGal />
   </div>
 );

@@ -2,7 +2,7 @@
 
 import './App.css'
 
-import { Routes,Route } from 'react-router-dom'
+import { Routes,Route, useLocation } from 'react-router-dom'
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import HomeSlider from './components/pages/HomeSlider'
 import About from './components/pages/About'
@@ -20,12 +20,25 @@ import Coming from './components/pages/Coming'
 import Enroll from './components/pages/Enroll'
 import logo from '../src/assets/school_pics/logo.png'
 import MyLiveChat from './components/MyLiveChat'
+import LoginPage from './components/admin/LoginPage'
+import DashBoard from './components/admin/DashBoard'
+import { useEffect, useState } from 'react'
+import NoticePage from './components/Notice/NoticePage'
+import CreateNotice from './components/admin/CreateNotice'
+import UploadImage from './components/admin/UploadImage'
+import CreateNoticeForm from './components/admin/Notice'
+import ShowNotice from './components/admin/ShowNotice'
+import ShowGallery from './components/admin/ShowGallery'
+import RequireAuth from './auth/RequireAuth'
 
 
 
 
 
 function App() {
+  const location = useLocation();
+  const navbarPaths = ['/', '/about', '/gallery', '/events', '/contact', '/vision', '/about/uniform', '/tetimonial', '/enroll'];
+  const shouldRenderNavbar = navbarPaths.includes(location.pathname);
   
   const events = [
     { title: 'Event 1', date: '2024-04-28' },
@@ -37,12 +50,39 @@ function App() {
   //   currency: "INR",
   //   intent: "capture",
   // };
+  const [showNotice,setShowNotice] = useState(true);
+
+  useEffect( () => {
+    const timeout = setTimeout(()=>{
+      setShowNotice(false)
+    },40000)
+
+    return () => clearTimeout(timeout)
+  },[]);
+
+  const hideNotice = () => {
+    setShowNotice(false)
+  }
+  
+
+  // useEffect(()=>{
+  //   const timeout = setTimeout(()=>{
+  //          setShowModal(false)
+  //        },5000)
+    
+  //        return () => clearTimeout(timeout)
+       
+  // },[]);
+
+  
 
   return (
    
     <>
+      
       <Header/>
-      <Navbar2 />
+      {shouldRenderNavbar && <Navbar2 />}
+      {showNotice && <NoticePage onClick={hideNotice} />}
       <Routes>
         <Route path='/' element={<HomeSlider/>}></Route>
         <Route path='/about' element={<About/>}></Route>
@@ -58,7 +98,16 @@ function App() {
         <Route path='/tetimonial' element={<Testimonial/>}></Route>
         <Route path='*' element={<Coming/>}></Route>
         <Route path='/enroll' element={<Enroll/>}></Route>
+        <Route path='/login' element={<LoginPage/>}></Route>
        
+       <Route path='/show/notice' element={<ShowNotice/>}></Route>
+       <Route path='/show/gallery' element={<ShowGallery/>}></Route>
+
+       <Route element={<RequireAuth allowedRoles={["ADMIN"]}/>}>
+        <Route path='/admin/dashboard' element={<DashBoard/>}></Route>
+        <Route path='/notice/create' element={<CreateNoticeForm/>}></Route>
+        <Route path='/upload/image' element={<UploadImage/>}></Route>
+       </Route>
       </Routes>
       <FloatingWhatsApp 
         phoneNumber='919308467268'
@@ -68,9 +117,9 @@ function App() {
         darkMode='true'
       />
       <div >
-      <MyLiveChat/>
+        <MyLiveChat/>
       </div>
-      <Footer/>
+     {shouldRenderNavbar && <Footer/>}
       </>
        
    

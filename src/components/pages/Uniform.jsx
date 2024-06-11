@@ -27,7 +27,7 @@ function Uniform() {
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     <tr>
-                                        <td className="px-6 py-4 whitespace-nowrap">St Marx Acadmey</td>
+                                        <td className="px-6 py-4 whitespace-nowrap">St Marx Academy</td>
                                         <td className="px-6 py-4 whitespace-nowrap">Dark Green Pant, White Shirt and Dark Green Tie</td>
                                         <td className='px-6 py-4 whitespace-nowrap'>Black Shoes,White Shocks</td>
                                     </tr>
@@ -51,7 +51,7 @@ function Uniform() {
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     <tr>
-                                        <td className="px-6 py-4 whitespace-nowrap">St Marx Acadmey</td>
+                                        <td className="px-6 py-4 whitespace-nowrap">St Marx Academy</td>
                                         <td className="px-6 py-4 whitespace-nowrap">Dark Green Skirt, White Shirt and Dark Green Tie</td>
                                         <td className='px-6 py-4 whitespace-nowrap'>Black Shoes,White Shocks</td>
                                     </tr>
